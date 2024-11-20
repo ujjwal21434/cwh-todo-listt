@@ -19,7 +19,7 @@ export class AddTodoComponent {
 
   onSubmit() {
     const todo: Todo = {
-        sno: 8, // This could be dynamic as per your implementation
+        sno: 8,
         title: this.title,
         desc: this.desc,
         active: true

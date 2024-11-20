@@ -1,0 +1,3 @@
+nav {
+    pointer-events: auto; /* Ensure this is set */
+  }

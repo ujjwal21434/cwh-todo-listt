@@ -1,12 +1,17 @@
-<app-add-todo (todoAdd)="addTodo($event)"></app-add-todo>
+<div class="container">
+    <h1 class="text-center mb-3">Todo list by Ujjwal</h1>
 
-<h4>Your todos</h4>
-<div *ngIf="todos.length === 0; else elseBlock">No todos to display</div>
+    <app-add-todo (todoAdd)="addTodo($event)"></app-add-todo>
 
-<ng-template #elseBlock>
-    <ul>
-        <li *ngFor="let todo of todos; let i = index">
-            <app-todo-item [todo]="todo" [index]="i" (todoDelete)="deleteTodo($event)" (todoCheckbox)="toggleTodo($event)"></app-todo-item>
-        </li>
-    </ul>
-</ng-template>
+    <h4>Your todos</h4>
+    <div *ngIf="todos.length === 0; else elseBlock">No todos to display</div>
+
+    <ng-template #elseBlock>
+        <ul>
+            <li *ngFor="let todo of todos; let i = index">
+                <app-todo-item [todo]="todo" [index]="i" (todoDelete)="deleteTodo($event)"
+                    (todoCheckbox)="toggleTodo($event)"></app-todo-item>
+            </li>
+        </ul>
+    </ng-template>
+</div>
